@@ -1,0 +1,76 @@
+.main {
+    &__inner {
+        display: grid;
+        grid-template-columns: 15px 1fr 15px;
+        background-color: $lightBg;
+
+        @media (min-width: 414px) {
+            grid-template-columns: 10px 1fr 10px;
+            background-color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: 20px 1fr 180px 20px;
+        }
+
+
+    }
+
+    &__wrap-img {
+        grid-column: 1/4;
+        max-width: 550px;
+        overflow: hidden;
+        position: relative;
+        height: 225px;
+
+        @media (min-width: 414px) {
+            height: 258px;
+        }
+
+        @media (min-width: 768px) {
+            height: 342px;
+            grid-column: 2/3;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(253, 255, 140, 0.49);
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+        height: 100%;
+    }
+
+
+    &__quotes-wrap {
+        background-color: #F0F0F0;
+        grid-column: 2/3;
+        padding: 20px 0;
+        @media (min-width: 768px) {
+            grid-column: 3/4;
+            padding: 0;
+            height: 100%;
+        }
+
+    }
+
+    &__quotes {
+        background-color: $blockBg;
+        height: 320px;
+        @media (min-width: 768px) {
+            height: 100%;
+        }
+    }
+
+
+
+
+
+}

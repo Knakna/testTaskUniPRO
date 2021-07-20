@@ -1,0 +1,23 @@
+$accent: #0078DC;
+$blockBg: #C4C4C4;
+$lightBg: #F0F0F0;
+$darkBg: #CFCFCF;
+
+%container {
+    padding: 0 15px;
+    max-width: 960px;
+    margin: 0 auto;
+
+    @media (min-width: 414px) {
+        padding: 0 10px;
+    }
+
+    @media (min-width: 768px) {
+        padding: 0 20px;
+    }
+
+    @media (min-width: 960px) {
+        padding: 0;
+    }
+
+}
