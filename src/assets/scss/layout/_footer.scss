@@ -1,0 +1,14 @@
+.footer {
+    padding-bottom: 40px;
+
+    .container {
+        @extend %container;
+        padding: 0;
+    }
+
+    &__inner {
+        min-height: 330px;
+
+        background-color: $accent;
+    }
+}

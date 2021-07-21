@@ -2,8 +2,9 @@ function test(a, b) {
     return a + b
 }
 
-console.log(test(5, 2));
-console.log(test(2, 4));
-console.log(test(9, 1));
-
+$(document).ready(function(){
+    $(".content__title").click(function(){
+        $(this).next().toggle();
+    });
+});
 //# sourceMappingURL=script.js.map
