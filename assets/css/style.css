@@ -31,6 +31,8 @@
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
     background-color: #fff;
     color: #000;
 }
@@ -38,7 +40,6 @@ body {
 .header {
     padding: 10px 0;
     background-color: #fff;
-    border: 1px solid;
 }
 
 @media (min-width: 768px) {
@@ -66,7 +67,6 @@ body {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
-    border: 1px solid;
 }
 
 @media (min-width: 960px) {
@@ -252,6 +252,7 @@ body {
 
 .main__quotes {
     height: 320px;
+    padding: 15px;
     background-color: #C4C4C4;
 }
 
@@ -288,10 +289,28 @@ body {
     }
 }
 
+@media (min-width: 768px) {
+    .content__inner {
+        margin: 0 20px;
+        background-color: #fff;
+    }
+}
+
+@media (min-width: 960px) {
+    .content__inner {
+        grid-template-columns: 1fr repeat(3, 180px);
+        -webkit-column-gap: 15px;
+        -moz-column-gap: 15px;
+        column-gap: 15px;
+        margin: 0;
+    }
+}
+
 .content__news {
     grid-column: 2/3;
     min-height: 515px;
-    margin: 20px 0;
+    margin-top: 20px;
+    padding: 15px;
     background-color: #C4C4C4;
 }
 
@@ -301,10 +320,17 @@ body {
     }
 }
 
+@media (min-width: 960px) {
+    .content__news {
+        grid-column: 1/2;
+        margin-bottom: 65px;
+    }
+}
+
 .content__info {
     grid-column: 2/3;
     min-height: 45px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     background-color: #C4C4C4;
     cursor: pointer;
 }
@@ -315,8 +341,46 @@ body {
     }
 }
 
+@media (min-width: 960px) {
+    .content__info {
+        margin-bottom: 65px;
+    }
+}
+
+@media (min-width: 960px) {
+    .content__info-1 {
+        grid-column: 2/3;
+    }
+}
+
+@media (min-width: 960px) {
+    .content__info-2 {
+        grid-column: 3/4;
+    }
+}
+
+@media (min-width: 960px) {
+    .content__info-3 {
+        grid-column: 4/5;
+    }
+}
+
+.content__title {
+    padding: 15px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.content__title:hover, .content__title:focus {
+    color: #0078DC;
+}
+
 .content__desc {
     display: none;
+}
+
+.content__text {
+    padding: 0 15px 15px;
 }
 
 .content__blocks {
@@ -327,12 +391,19 @@ body {
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-bottom: 20px;
+    padding: 20px 0;
+    background-color: #F0F0F0;
 }
 
 @media (min-width: 414px) {
     .content__blocks {
         grid-column: 1/2;
+    }
+}
+
+@media (min-width: 960px) {
+    .content__blocks {
+        display: none;
     }
 }
 
@@ -352,6 +423,10 @@ body {
     width: 44px;
     height: 44px;
     background-color: #C4C4C4;
+}
+
+.footer {
+    padding-bottom: 40px;
 }
 
 .footer .container {
